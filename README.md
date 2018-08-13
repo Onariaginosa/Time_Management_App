@@ -1,2 +1,2 @@
-# Time_Management_App
-This is a time management web application for a CSSI project
+# Toki Adventure
+This is a choose your own adventure application 
