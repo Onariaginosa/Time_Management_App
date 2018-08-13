@@ -11,7 +11,8 @@ jinja_env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Welcome to Toki Adventure")
+        welcome_template = jinja_env.get_template("templates/welcome.html")
+        self.response.write(welcome_template.render())
 
 class Character(webapp2.RequestHandler):
     def get(self):
