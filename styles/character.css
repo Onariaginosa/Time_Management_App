@@ -24,7 +24,7 @@ body{
 }
 
 #dogpic:hover {
-  background-color: blue;
+  background-color: rgb(91, 255, 186);
 }
 
 #catpic {
@@ -37,7 +37,7 @@ body{
 }
 
 #catpic:hover {
-  background-color: blue;
+  background-color: rgb(91, 255, 186);
 }
 
 #pandapic {
@@ -51,5 +51,5 @@ body{
 }
 
 #pandapic:hover {
-  background-color: blue;
+    background-color: rgb(91, 255, 186);
 }
