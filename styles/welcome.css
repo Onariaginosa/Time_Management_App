@@ -14,11 +14,12 @@ text-shadow: 2px 2px 0px;
    display: inline-block;
    font-size: 16px;
    cursor:pointer;
-   margin: 4px,2px
+   margin: 4px,2px;
  }
 #butterfly {
   align-items: center;
   margin: 0px;
+  width:20px;
 
 
 }
