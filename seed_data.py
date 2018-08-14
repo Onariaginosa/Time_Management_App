@@ -1,4 +1,4 @@
-from models import Character, KBorn, PB2, PPath, Path, Looper
+from models import Character, KBorn, PB2, PPath, Path, Looper, KPath
 
 
 def seed_data():
@@ -20,13 +20,15 @@ def seed_data():
     kitty_loop = Looper(loop_1 = "Ouch! The kid was a sadist, and tortured you until you died.",
     loop_2 = "You have a new home! However, that rich person is cat obsessive and dresses you in tight clothing. Do you run or stay?",
     loop_3 = "Noice! The old man wanted  a support animal, so you now live your day to day life well fed and happy. However, the old man died of some unknown illness. The old man left you to his nephew. Do you stay with him or run away?",
-    run = "You ran away.").put()
+    run = "You ran away.",
+    owner = kitty_key).put()
 
 
-
-
-
-
+    kitty_Path = KPath(p_2a = "You live your life miserably until you die from being strangled by an overly tight kitty outfit.",
+    p_2b = "After you run away, you fell asleep in a damp alley. When you awaken, you are in a warm animal shelter. You are soon adopted by a nice person.",
+    p_3a = "Awesomeness apparently runs in the family. The nephew is great and you live a long and happy life with him.",
+    p_3b = "Because you have been domesticated, you do not know how to survive without human help. You come in contact with a dead mouse and begin to eat it. However, the mouse had leptospirosis, so you die of kidney failure.",
+    owner = kitty_key).put()
 
     panda_born = Born(born_1 = "For your whole life you've been on the run from hunters. Your mother and father fell victim to the vicous fur trade in China",
     born_2 = "You were born in the San Diego Zoo where you spend your time posing for selfies with little kids and playing with your siblings",
