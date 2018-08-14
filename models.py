@@ -18,6 +18,7 @@ class PB2(ndb.Model):
 class PPath(ndb.Model):
     PP_1 = ndb.StringProperty(required = True)
     PP_2 = ndb.StringProperty(required = True)
+    owner = ndb.KeyProperty(Character)
 
 class Path(ndb.Model):
     p_1a = ndb.ListProperty(required = True)

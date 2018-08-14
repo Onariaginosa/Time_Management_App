@@ -41,11 +41,13 @@ def seed_data():
     owner = doggo_key).put()
 
     doggo_pre_path = PPath(PP_1 = "You regain your strength and decide to take a chance. You go beyond your ravine.",
-    PP_2 = "The dog buiscuit had salmonella and you become extremely sick.")
+    PP_2 = "The dog buiscuit had salmonella and you become extremely sick.",
+    owner = doggo_key)
 
     doggo_path = Path(p_1a = ["You got run over by a car. You are dead.", "You find a pack of dogs. You are happy with your newfound life."],
     p_1b = ["A child finds you and takes you home. The child's family treats you and you feel better", "You die from being sick."],
     p_2a = ["The owner of the car is a travelling musician. He wants a companion for the road so he takes you. You ride off into the sunset excited for what lies ahead.", "The driver doesn't stop. You chase on for hours and get tired. You die of exhaustion in an unknown place"],
     p_2b = ["Your owner sees you running away and catches you. You are taken back to your life of solitude."],
     p_3a = ["He yells and tries to grab the bread but you eat it. You run away and the man dies.", "You nudge the bread with your nose toward the man. He places the bread infront of you and finds another piece of bread. You go to bed happy"],
-    p_3b = ["He breaks the bread in half and shares it. You rest you muzzle on him and dze off somewhat hungry.", "He kicks you and runs off. You bite his finger off and run away with the bread. The man's finger becomes infected and he dies. You  eat the bread and live for another day."])
+    p_3b = ["He breaks the bread in half and shares it. You rest you muzzle on him and dze off somewhat hungry.", "He kicks you and runs off. You bite his finger off and run away with the bread. The man's finger becomes infected and he dies. You  eat the bread and live for another day."],
+    owner = doggo_key)
