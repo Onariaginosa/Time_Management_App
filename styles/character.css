@@ -12,7 +12,15 @@ body{
   grid-row: 1;
 }
 
-#characters {
-  width:100px;
-  height:100px;
+#dogpic {
+  width:450px;
+  height:450px;
+}
+#catpic {
+  width:450px;
+  height:450px;
+}
+#pandapic {
+  width:450px;
+  height:450px;
 }

@@ -17,9 +17,10 @@ text-shadow: 2px 2px 0px;
    margin: 4px,2px;
  }
 #butterfly {
+  text-align: center;
   align-items: center;
+  display:block;
   margin: 0px;
-  width:20px;
 
 
 }
