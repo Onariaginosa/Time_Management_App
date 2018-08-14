@@ -16,7 +16,8 @@ class MainPage(webapp2.RequestHandler):
 
 class Character(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Choose Your character party ppl")
+        char_template = jinja_env.get_template("templates/character.html")
+        self.response.write(char_template.render())
 
 class DogStory(webapp2.RequestHandler):
     def get(self):
