@@ -23,7 +23,6 @@ def seed_data():
     run = "You ran away.",
     owner = kitty_key).put()
 
-
     kitty_Path = KPath(p_2a = "You live your life miserably until you die from being strangled by an overly tight kitty outfit.",
     p_2b = "After you run away, you fell asleep in a damp alley. When you awaken, you are in a warm animal shelter. You are soon adopted by a nice person.",
     p_3a = "Awesomeness apparently runs in the family. The nephew is great and you live a long and happy life with him.",
