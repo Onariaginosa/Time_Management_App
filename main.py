@@ -14,14 +14,14 @@ class MainPage(webapp2.RequestHandler):
         welcome_template = jinja_env.get_template("templates/welcome.html")
         self.response.write(welcome_template.render())
 
+
 class Character(webapp2.RequestHandler):
     def get(self):
         self.response.write("Choose Your character party ppl")
 
 class DogStory(webapp2.RequestHandler):
     def get(self):
-        template = jinja_current_directory.get_template("templates/welcome.html")
-        self.response.write(template.render())
+        self.response.write("Story goes here for Dog")
 
 class PandaStory(webapp2.RequestHandler):
     def get(self):
