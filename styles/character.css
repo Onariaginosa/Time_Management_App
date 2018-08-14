@@ -22,6 +22,11 @@ body{
   width:450px;
   height:450px;
 }
+
+#dogpic:hover {
+  background-color: blue;
+}
+
 #catpic {
   background-color: rgb(51, 204, 255);
   grid-row:2;
@@ -30,6 +35,11 @@ body{
   height:450px;
   margin-top:10px;
 }
+
+#catpic:hover {
+  background-color: blue;
+}
+
 #pandapic {
   margin-top: 10px;
   margin-left: 10px;
@@ -38,4 +48,8 @@ body{
   grid-column:4;
   width:450px;
   height:450px;
+}
+
+#pandapic:hover {
+  background-color: blue;
 }
