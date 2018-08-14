@@ -13,3 +13,6 @@ class PB2(ndb.Model):
     pb_1 = ndb.StringProperty(required = True)
     pb_2 = ndb.StringProperty(required = True)
     pb_3 = ndb.StringProperty(required = True)
+    owner = ndb.KeyProperty(Character)
+
+class Path(ndb.Model):
