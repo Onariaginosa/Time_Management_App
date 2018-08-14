@@ -20,22 +20,13 @@ class Character(webapp2.RequestHandler):
         char_template = jinja_env.get_template("templates/character.html")
         self.response.write(char_template.render())
 
-class DogStory(webapp2.RequestHandler):
+class Story(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Story goes here for Dog")
-
-class PandaStory(webapp2.RequestHandler):
-    def get(self):
-        self.response.write("Story goes here for Panda")
-class CatStory(webapp2.RequestHandler):
-    def get(self):
-        self.response.write("Story goes here for Cat")
-
+        story_template = jinja_env.get_template("templates/story.html")
+        self.response.write(story_template.render())
 
 app = webapp2.WSGIApplication([
    ('/', MainPage),
    ('/character',Character),
-   ('/dog',DogStory),
-   ('/panda',PandaStory),
-   ('/cat',CatStory)
+   ('/story',Story)
 ], debug=True)
