@@ -1,4 +1,9 @@
-section {
+body {
   background-color: blue;
   color: green;
+  grid-template-columns: auto;
+  grid-template-rows:auto;
 }
+ #div {
+   color:blue;
+ }
