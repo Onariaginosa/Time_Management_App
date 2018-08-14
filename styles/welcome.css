@@ -3,6 +3,9 @@ background-color: rgb(51, 204, 255);
 font-family: 'Satisfy', cursive;
 text-align: center;
 font-size:100px;
+grid-template-columns: auto;
+grid-template-rows: 100px;
+text-shadow: 2px 2px 0px;
 }
 
  #button {
@@ -10,5 +13,12 @@ font-size:100px;
    background-color: black;
    display: inline-block;
    font-size: 16px;
-
+   cursor:pointer;
+   margin: 4px,2px
  }
+#butterfly {
+  align-items: center;
+  margin: 0px;
+
+
+}
