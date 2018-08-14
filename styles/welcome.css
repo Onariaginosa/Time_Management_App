@@ -9,22 +9,8 @@ grid-template-rows: 100px;
 text-shadow: 2px 2px 0px;
 }
 
- #submit_button {
-   font-size:60px;
-   padding:0.46em 1.6em;
-    border:0.1em solid blue;
-    margin:0 0.2em 0.2em 0;
-    /* border-radius: 10px;
-    font-weight:300; */
-    color: blue;
-    /* display:inline-block;
-    box-sizing: border-box;
-    text-decoration:none;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    background-color: black;
-    text-align:center;
-    transition: all 0.15s; */
- }
+
+
 
 #butterfly {
   text-align: center;
