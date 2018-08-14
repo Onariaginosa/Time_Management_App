@@ -40,6 +40,22 @@ def seed_data():
     pb_3 = "Oh no! Your circus has been disbanded by PETA! Do you join a new circus or start a new life?",
     owner = panda_key).put()
 
+    panda_path = Path(p_1a = ["Your attempt to escape fails and you end up cutting your foot off. You lose too much blood and your vision is dimming fast. You panic because you don’t want your life to end so soon! But your eyes close anyway as you slowly bleed out painfully."],
+    p_1b = ["Luckily, you were found by a group of terrorists who help free you."],
+    p_2a = ["Your brother suddenly comes out of nowhere and is inches from trampling the kid. But since the zookeeper heard your cries, he shows up and saves the kid. Your good behavior is rewarded and the zookeeper buys you new toys! Yay!"],
+    p_2b = ["You end up playing with the kid and have a lot of fun. However, the kid’s mother spots you both playing and threatens to sue the zoo. The zoo decides to free you into the wild and you become separated from your family. You slowly grow apart from them, and after 2 years you have totally forgotten about them. Sad."],
+    p_3a = ["You are unable to cope with the stress of living by yourself and end up joining a new circus."],
+    p_3b = ["You are doing great at the new circus and were even offered a new job from Larry the Lion. Should you take the job?"],
+    owner = panda_key).put()
+
+    panda_post_path = PPath(PP_1 = "Unfortunately your new job requires for you to jump into a pool of sharks. Your attempt to jump fails and you end up getting eaten by the sharks.",
+    PP_2 = "You realize that you like your current job. In fact, the tricks that you partake in end up making you rich and famous. You live out the rest of your life swimming in your own fortune and enjoying your life. Yay.",
+    owner = panda_key).put()
+
+
+
+
+
 
     doggo_born = Born(born_1 = "You wake up in a dark ravine without any family. You are starving. You scavenge for food but cannot find anything.",
     born_2 = "You were born into a rich family, but they are never home. Your food is overflowing because your owners do not know how much to feed you. The food looks old now.",
