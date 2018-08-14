@@ -20,7 +20,8 @@ class Character(webapp2.RequestHandler):
 
 class DogStory(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Story goes here for Dog")
+        template = jinja_current_directory.get_template("templates/welcome.html")
+        self.response.write(template.render())
 
 class PandaStory(webapp2.RequestHandler):
     def get(self):
