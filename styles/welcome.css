@@ -1,5 +1,6 @@
 body {
 background-color: rgb(51, 204, 255);
+color:white;
 font-family: 'Satisfy', cursive;
 text-align: center;
 font-size:100px;
@@ -9,12 +10,13 @@ text-shadow: 2px 2px 0px;
 }
 
  #button {
+
    color:white;
    background-color: black;
    display: inline-block;
    font-size: 16px;
    cursor:pointer;
-   margin: 4px,2px;
+   margin: 10px,2px;
  }
 #butterfly {
   text-align: center;

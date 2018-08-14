@@ -5,6 +5,7 @@ body{
 }
 #title {
   font-size: 40px;
+  color:white;
   height:20vh;
   background-color: rgb(51, 204, 255);
   font-family: 'Satisfy', cursive;
@@ -13,10 +14,17 @@ body{
 }
 
 #dogpic {
+  margin-top: 10px;
+  background-color: rgb(51, 204, 255);
+  grid-row: 2
+  grid-column:4;
   width:450px;
   height:450px;
 }
 #catpic {
+  background-color: rgb(51, 204, 255);
+  grid-row:2;
+  column:2;
   width:450px;
   height:450px;
 }
