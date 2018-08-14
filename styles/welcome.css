@@ -9,14 +9,19 @@ grid-template-rows: 100px;
 text-shadow: 2px 2px 0px;
 }
 
+ #button {
 
-
-
+   color:white;
+   background-color: black;
+   display: inline-block;
+   font-size: 16px;
+   cursor:pointer;
+   margin: 10px,2px;
+ }
 #butterfly {
   text-align: center;
   align-items: center;
   display:block;
   margin: 0px;
-
 
 }
