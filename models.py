@@ -15,4 +15,15 @@ class PB2(ndb.Model):
     pb_3 = ndb.StringProperty(required = True)
     owner = ndb.KeyProperty(Character)
 
+class PPath(ndb.Model):
+    PP_1 = ndb.StringProperty(required = True)
+    PP_2 = ndb.StringProperty(required = True)
+
 class Path(ndb.Model):
+    p_1a = ndb.ListProperty(required = True)
+    p_1b = ndb.ListProperty(required = True)
+    p_2a = ndb.ListProperty(required = True)
+    p_2b = ndb.ListProperty(required = True)
+    p_3a = ndb.ListProperty(required = True)
+    p_3b = ndb.ListProperty(required = True)
+    owner = ndb.KeyProperty(Character)
