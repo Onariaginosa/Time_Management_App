@@ -1,4 +1,4 @@
-from models import Character, KBorn
+from models import Character, KBorn, PB2
 
 
 def seed_data():
@@ -18,7 +18,6 @@ def seed_data():
     born_3 = "The circus means everything to you. It has been your home for the last ten years.",
     owner = panda_key).put()
 
+    panda_post_born = PB2(pb_1 = "You become stuck in a trap! OH NO! Should you"
+
     doggo_born = Born()
-
-
-    
