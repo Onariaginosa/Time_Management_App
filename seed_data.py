@@ -53,15 +53,10 @@ def seed_data():
     owner = panda_key).put()
 
 
-
-
-
-
     doggo_born = Born(born_1 = "You wake up in a dark ravine without any family. You are starving. You scavenge for food but cannot find anything.",
     born_2 = "You were born into a rich family, but they are never home. Your food is overflowing because your owners do not know how much to feed you. The food looks old now.",
     born_3 = "Your owner pats your head with affection. He gazes into your eyes and rubs you behind your ears, just the way you like. Your tail wags. You almost forget you both have no house to live in",
     owner = doggo_key).put()
-
 
     doggo_post_born = PB2(pb_1 = "You see food on the dirty floor. One is a seemingly moldy dog buscuit and a dead muse lies next to it. Which do you eat?",
     pb_2 = "You don't want to have such a boring, empty life. You want more, so you run away. DO you follow the music playing from a dirty car or run aimlessly?"
@@ -78,4 +73,4 @@ def seed_data():
     p_2b = ["Your owner sees you running away and catches you. You are taken back to your life of solitude."],
     p_3a = ["He yells and tries to grab the bread but you eat it. You run away and the man dies.", "You nudge the bread with your nose toward the man. He places the bread infront of you and finds another piece of bread. You go to bed happy"],
     p_3b = ["He breaks the bread in half and shares it. You rest you muzzle on him and dze off somewhat hungry.", "He kicks you and runs off. You bite his finger off and run away with the bread. The man's finger becomes infected and he dies. You  eat the bread and live for another day."],
-    owner = doggo_key)
+    owner = doggo_key).put()
