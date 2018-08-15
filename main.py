@@ -3,7 +3,7 @@ import webapp2
 from random import shuffle
 import os
 import jinja2
-from cat import kat_born, kat_post_born
+from cat import kat_born, kat_post_born, kitty_loop
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -34,9 +34,9 @@ class Cat1(webapp2.RequestHandler):
 
 class Cat2(webapp2.RequestHandler):
     def get(self):
-        kittten = kat_post_born()
+        Katt = kitty_loop()
         cat2_template = jinja_env.get_template("templates/cat2.html")
-        self.response.write(cat2_template.render({"kittten" :kittten }))
+        self.response.write(cat2_template.render({"Katt" :Katt }))
 
 class PandaStory(webapp2.RequestHandler):
     def get(self):
@@ -49,7 +49,6 @@ class DogStory(webapp2.RequestHandler):
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
-
         self.response.write(seed_data_template.render())
 
 app = webapp2.WSGIApplication([
@@ -60,7 +59,7 @@ app = webapp2.WSGIApplication([
    ('/dog',DogStory),
    ('/seed_data', LoadDataHandler ),
    ('/cat1',Cat1),
-   ('/cat2',Cat1),
+   ('/cat2',Cat2),
 
 
 
