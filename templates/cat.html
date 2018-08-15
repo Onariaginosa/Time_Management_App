@@ -1,0 +1,13 @@
+{% extends "templates/template.html" %}
+
+{% block title%}You are born!{% endblock %}
+
+{%block message%} {{kitten}} {% endblock %}
+
+{%block image %} src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+<form method="get" action = "/cat1">
+   <input id="submit_button" value = "go" type="submit"><span></span>
+</form>
+{% endblock %}

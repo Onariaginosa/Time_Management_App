@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href= "/styles/cat_2button.css">
-    <script src="welcome.js"></script>
-    <title>Main Page</title>
-  </head>
-  <body>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <h1> You are Found!!</h1>
-    <p> {{Katt}} </p>
-    <div id = "image">
-      <img src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></img>
-   </div>
-    <div id="button">
-      <form method="get" action = "/catB">
-         <input id="submit_button" value = "Run" type="submit"><span></span>
-      </form>
-      <form method="get" action = "/catA">
-         <input id="submit_button" value = "Stay" type="submit"><span></span>
-      </form>
-    </div>
-  </body>
-</html>
+
+{% extends "templates/template.html" %}
+
+{% block title%}You chose a home!{% endblock %}
+
+{%block message%} {{Katt}} {% endblock %}
+
+{%block image %} src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+  {%if numb == 1%}
+    <form method="get" action = "/">
+      <input id="submit_button" value = "Home" type="submit"><span></span>
+  {%else%}
+    <form method="get" action = "/catB">
+       <input id="submit_button" value = "Run" type="submit"><span></span>
+    </form>
+    <form method="get" action = "/catA">
+       <input id="submit_button" value = "Stay" type="submit"><span></span>
+    </form>
+  {%endif%}
+{% endblock %}
