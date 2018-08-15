@@ -15,6 +15,7 @@ text-shadow: 2px 2px 0px;
 
 }
 
+
 #submit_button {
    background-color: white; /* Green */
    border: none;
@@ -27,6 +28,10 @@ text-shadow: 2px 2px 0px;
    margin: 4px 2px;
    cursor: pointer;
    border-radius: 15px;
+ }
+
+ #submit_button:hover {
+   background-color: rgb(91, 255, 186);
  }
 
 #image {

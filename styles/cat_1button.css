@@ -29,6 +29,12 @@ text-shadow: 2px 2px 0px;
    border-radius: 15px;
  }
 
+
+ #submit_button:hover {
+   background-color: rgb(91, 255, 186);
+ }
+
+
 #image {
   text-align: center;
   align-items: center;
