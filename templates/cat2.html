@@ -1,4 +1,3 @@
-
 {% extends "templates/template.html" %}
 
 {% block title%}You chose a home!{% endblock %}
@@ -8,15 +7,15 @@
 {%block image %} src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
 
 {%block button%}
-  {%if numb == 1%}
-    <form method="get" action = "/">
-      <input id="submit_button" value = "Home" type="submit"><span></span>
-  {%else%}
-    <form method="get" action = "/catB">
-       <input id="submit_button" value = "Run" type="submit"><span></span>
-    </form>
-    <form method="get" action = "/catA">
-       <input id="submit_button" value = "Stay" type="submit"><span></span>
-    </form>
-  {%endif%}
+ {%if numb == 1%}
+   <form method="get" action = "/">
+     <input id="submit_button" value = "Home" type="submit"><span></span>
+ {%else%}
+   <form method="get" action = "/catB">
+      <input id="submit_button" value = "Run" type="submit"><span></span>
+   </form>
+   <form method="get" action = "/catA">
+      <input id="submit_button" value = "Stay" type="submit"><span></span>
+   </form>
+ {%endif%}
 {% endblock %}

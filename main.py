@@ -3,7 +3,7 @@ import webapp2
 from random import shuffle
 import os
 import jinja2
-from cat import kat_born, kat_post_born, kitty_loop, number
+from cat import kat_born, kat_post_born, kitty_loop, number, kitty_pathB, kitty_pathA
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -41,17 +41,15 @@ class Cat2(webapp2.RequestHandler):
 
 class CatA(webapp2.RequestHandler):
     def get(self):
-        Katt = kitty_loop()
-        numb = number()
-        cat2_template = jinja_env.get_template("templates/cat2.html")
-        self.response.write(cat2_template.render({"Katt" :Katt, "numb":numb}))
+        Acat = kitty_pathA()
+        catA_template = jinja_env.get_template("templates/catA.html")
+        self.response.write(catA_template.render({"Acat" :Acat}))
 
 class CatB(webapp2.RequestHandler):
     def get(self):
-        Katt = kitty_loop()
-        numb = number()
-        cat2_template = jinja_env.get_template("templates/cat2.html")
-        self.response.write(cat2_template.render({"Katt" :Katt, "numb":numb}))
+        Bcat = kitty_pathB()
+        catB_template = jinja_env.get_template("templates/catB.html")
+        self.response.write(catB_template.render({"Bcat" :Bcat}))
 
 class PandaStory(webapp2.RequestHandler):
     def get(self):

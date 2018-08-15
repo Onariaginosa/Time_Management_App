@@ -1,0 +1,14 @@
+
+{% extends "templates/template.html" %}
+
+{% block title%}The End!{% endblock %}
+
+{%block message%} {{Acat}} {% endblock %}
+
+{%block image %} src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+<form method="get" action = "/">
+  <input id="submit_button" value = "Home" type="submit"><span></span>
+</form>
+{% endblock %}

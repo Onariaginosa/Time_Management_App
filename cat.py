@@ -48,3 +48,21 @@ def kitty_loop():
 def number():
     global post_born_opt
     return post_born_opt
+
+def kitty_pathB():
+    kitty_key = Character.query(Character.species == "Cat").get()
+    kitty_pather = KPath.query(KPath.owner == kitty_key.key).get()
+    global post_born_opt
+    if post_born_opt == 2:
+        return kitty_pather.p_2b
+    elif post_born_opt == 3:
+        return kitty_pather.p_3b
+
+def kitty_pathA():
+    kitty_key = Character.query(Character.species == "Cat").get()
+    kitty_pathers = KPath.query(KPath.owner == kitty_key.key).get()
+    global post_born_opt
+    if post_born_opt == 2:
+        return kitty_pathers.p_2a
+    elif post_born_opt == 3:
+        return kitty_pathers.p_3a
