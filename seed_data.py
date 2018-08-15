@@ -1,4 +1,4 @@
-from models import Character, KBorn, PB2, PPath, Path, Looper, KPath
+from models import Character, Born, PB2, PPath, Path, Looper, KPath
 
 
 def seed_data():
