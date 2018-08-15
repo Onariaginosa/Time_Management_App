@@ -10,9 +10,28 @@ text-shadow: 2px 2px 0px;
 }
 
 h1 {
+  display: block;
   grid-row:1;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50;
+  animation: type 2s steps(20);
+  overflow: hidden;
+  white-space:nowrap;
+  font-family: consolas;
+  border-right: 4px solid black;
+  width: 15ch;
+  text-align: center;
+}
 
+
+@keyframes type {
+  0% {
+    width:0ch;
+  }
+  100% {
+    width:15ch;
+  }
 }
 
 #button {
@@ -38,7 +57,7 @@ h1 {
  #submit_button:hover {
    background-color: rgb(91, 255, 186);
  }
- 
+
 #butterfly {
   text-align: center;
   align-items: center;
