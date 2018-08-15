@@ -1,23 +1,30 @@
 body{
+  height:100vh;
+  width:100vw;
   grid-template-columns: 1fr,1fr,1fr;
   grid-template-rows: 1fr,1fr,1fr;
-
+  background-color: rgb(44, 199, 255)
 }
 #title {
+  margin:0;
   font-size: 40px;
   color:white;
-  height:20vh;
   background-color: rgb(51, 204, 255);
   font-family: 'Satisfy', cursive;
   grid-column: : 1/ span 3;
   grid-row: 1;
 }
 
+#pics {
+
+  margin:0;
+  align-self: center;
+}
 #dogpic {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-right:10px;
   background-color: rgb(51, 204, 255);
-  grid-row: 2;
+  grid-row: 3;
   grid-column:3;
   width:450px;
   height:450px;
@@ -29,11 +36,11 @@ body{
 
 #catpic {
   background-color: rgb(51, 204, 255);
-  grid-row:2;
+  grid-row:3;
   grid-column:2;
   width:450px;
   height:450px;
-  margin-top:10px;
+  margin-top:0px;
 }
 
 #catpic:hover {
@@ -41,10 +48,10 @@ body{
 }
 
 #pandapic {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 10px;
   background-color: rgb(51, 204, 255);
-  grid-row:2;
+  grid-row:3;
   grid-column:4;
   width:450px;
   height:450px;
