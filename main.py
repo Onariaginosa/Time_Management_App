@@ -25,6 +25,13 @@ class CatStory(webapp2.RequestHandler):
         kitten = kat_born()
         cat_template = jinja_env.get_template("templates/cat.html")
         self.response.write(cat_template.render({"kitten" :kitten }))
+
+class Cat1(webapp2.RequestHandler):
+    def get(self):
+        kitten = kat_born()
+        cat1_template = jinja_env.get_template("templates/cat1.html")
+        self.response.write(cat1_template.render({"kitten" :kitten }))
+
 class PandaStory(webapp2.RequestHandler):
     def get(self):
         panda_template = jinja_env.get_template("templates/panda.html")
@@ -36,7 +43,7 @@ class DogStory(webapp2.RequestHandler):
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
-        
+
         self.response.write(seed_data_template.render())
 
 app = webapp2.WSGIApplication([
@@ -46,6 +53,8 @@ app = webapp2.WSGIApplication([
    ('/panda',PandaStory),
    ('/dog',DogStory),
    ('/seed_data', LoadDataHandler ),
+   ('/cat1',Cat1),
+
 
 
 
