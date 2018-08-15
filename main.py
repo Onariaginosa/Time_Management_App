@@ -39,6 +39,20 @@ class Cat2(webapp2.RequestHandler):
         cat2_template = jinja_env.get_template("templates/cat2.html")
         self.response.write(cat2_template.render({"Katt" :Katt, "numb":numb}))
 
+class CatA(webapp2.RequestHandler):
+    def get(self):
+        Katt = kitty_loop()
+        numb = number()
+        cat2_template = jinja_env.get_template("templates/cat2.html")
+        self.response.write(cat2_template.render({"Katt" :Katt, "numb":numb}))
+
+class CatB(webapp2.RequestHandler):
+    def get(self):
+        Katt = kitty_loop()
+        numb = number()
+        cat2_template = jinja_env.get_template("templates/cat2.html")
+        self.response.write(cat2_template.render({"Katt" :Katt, "numb":numb}))
+
 class PandaStory(webapp2.RequestHandler):
     def get(self):
         panda_template = jinja_env.get_template("templates/panda.html")
