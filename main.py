@@ -61,6 +61,8 @@ app = webapp2.WSGIApplication([
    ('/seed_data', LoadDataHandler ),
    ('/cat1',Cat1),
    ('/cat2',Cat2),
+   ('/catB', CatB),
+   ('/catA', CatA),
 
 
 

@@ -1,7 +1,7 @@
 body {
 background-color: rgb(51, 204, 255);
 color:white;
-font-family: 'Ubuntu', sans-serif;
+font-family: 'Inconsolata', monospace;
 text-align: center;
 font-size:50px;
 grid-template-rows: 1fr 2fr 1fr;
@@ -16,7 +16,7 @@ text-shadow: 2px 2px 0px;
 }
 
 #submit_button {
-   background-color: white; 
+   background-color: white;
    border: none;
    color: rgb(51, 204, 255);
    padding: 15px 32px;
