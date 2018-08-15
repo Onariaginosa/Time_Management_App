@@ -16,7 +16,7 @@ text-shadow: 2px 2px 0px;
 }
 
 #submit_button {
-   background-color: white; /* Green */
+   background-color: white; 
    border: none;
    color: rgb(51, 204, 255);
    padding: 15px 32px;
