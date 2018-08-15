@@ -20,6 +20,10 @@ body{
 
 }
 
+#text {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #pics {
   margin:5px;
   align-self: center;
@@ -33,7 +37,7 @@ body{
   grid-column:3;
   width:350px;
   height:350px;
-  float: left;
+
 
 
 }
@@ -50,7 +54,6 @@ body{
   width:350px;
   height:350px;
   margin-top:10px;
-  float: center;
 
 
 }
@@ -68,7 +71,7 @@ body{
   grid-column:4;
   width:350px;
   height:350px;
-  float: right;
+
 }
 
 #pandapic:hover {
