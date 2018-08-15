@@ -21,19 +21,19 @@ class PPath(ndb.Model):
     owner = ndb.KeyProperty(Character)
 
 class Path(ndb.Model):
-    p_1a = ndb.ListProperty(required = True)
-    p_1b = ndb.ListProperty(required = True)
-    p_2a = ndb.ListProperty(required = True)
-    p_2b = ndb.ListProperty(required = True)
-    p_3a = ndb.ListProperty(required = True)
-    p_3b = ndb.ListProperty(required = True)
+    p_1a = ndb.StringProperty(repeated = True)
+    p_1b = ndb.StringProperty(repeated = True)
+    p_2a = ndb.StringProperty(repeated = True)
+    p_2b = ndb.StringProperty(repeated = True)
+    p_3a = ndb.StringProperty(repeated = True)
+    p_3b = ndb.StringProperty(repeated = True)
     owner = ndb.KeyProperty(Character)
 
 class Looper(ndb.Model):
     loop_1 = ndb.StringProperty(required = True)
     loop_2 = ndb.StringProperty(required = True)
     loop_3 = ndb.StringProperty(required = True)
-    nope = ndb.StringProperty(required = True)
+    run = ndb.StringProperty(required = True)
     owner = ndb.KeyProperty(Character)
 
 class KPath(ndb.Model):

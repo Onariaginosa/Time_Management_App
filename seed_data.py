@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from models import Character, Born, PB2, PPath, Path, Looper, KPath
 
 
@@ -58,7 +60,7 @@ def seed_data():
     owner = doggo_key).put()
 
     doggo_post_born = PB2(pb_1 = "You see food on the dirty floor. One is a seemingly moldy dog buscuit and a dead muse lies next to it. Which do you eat?",
-    pb_2 = "You don't want to have such a boring, empty life. You want more, so you run away. DO you follow the music playing from a dirty car or run aimlessly?"
+    pb_2 = "You don't want to have such a boring, empty life. You want more, so you run away. DO you follow the music playing from a dirty car or run aimlessly?",
     pb_3 = "You see that there is no food for you both tonight. There is only enough for one of you. Do you take the food, or let the hooman have it?",
     owner = doggo_key).put()
 

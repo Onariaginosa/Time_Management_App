@@ -3,8 +3,7 @@ import webapp2
 from random import shuffle
 import os
 import jinja2
-from models import Character, Born, PB2, PPath, Path, Looper, KPath
-from seed_data import seed_data
+from cat import kat_born
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -23,9 +22,9 @@ class Character(webapp2.RequestHandler):
 
 class CatStory(webapp2.RequestHandler):
     def get(self):
-        kat_born = Born.query().order().fetch()
+        kitten = kat_born()
         cat_template = jinja_env.get_template("templates/cat.html")
-        self.response.write(cat_template.render())
+        self.response.write(cat_template.render({"kitten" :kitten }))
 class PandaStory(webapp2.RequestHandler):
     def get(self):
         panda_template = jinja_env.get_template("templates/panda.html")
@@ -37,8 +36,8 @@ class DogStory(webapp2.RequestHandler):
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
-        seed_data()
-        self.response.write("Seed_Data added to database")
+        
+        self.response.write(seed_data_template.render())
 
 app = webapp2.WSGIApplication([
    ('/', MainPage),
@@ -47,6 +46,7 @@ app = webapp2.WSGIApplication([
    ('/panda',PandaStory),
    ('/dog',DogStory),
    ('/seed_data', LoadDataHandler ),
+
 
 
 ], debug=True)
