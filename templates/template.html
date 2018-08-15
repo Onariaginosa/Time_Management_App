@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href= "/styles/cat_2button.css">
+    <script src="welcome.js"></script>
+    <title>Toki Adventure</title>
+  </head>
+  <body>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <h1>{% block title%} {%endblock%}</h1>
+    <p>{%block message%} {%endblock%}</p>
+    <div id = "image">
+      <img {%block image %} {%endblock%} ></img>
+    </div>
+    <div id = "button">
+      {%block button%} {%endblock%}
+    </div>
+  </body>
+</html>

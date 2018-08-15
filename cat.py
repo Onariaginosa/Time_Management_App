@@ -44,3 +44,7 @@ def kitty_loop():
         return kitty_looper.loop_2
     elif post_born_opt == 3:
         return kitty_looper.loop_3
+
+def number():
+    global post_born_opt
+    return post_born_opt
