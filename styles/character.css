@@ -21,8 +21,9 @@ body{
 }
 
 #pics {
-    /* display: block; */
-    margin-left: 200px;
+    width: 350px;
+    height: 350px;
+    align-items: center;
 }
 #dogpic {
 
@@ -30,7 +31,7 @@ body{
   margin-top: 10px;
   background-color: rgb(51, 204, 255);
   grid-row: 3;
-  grid-column:3;
+  grid-column:1;
   width:350px;
   height:350px;
   /* float: left; */
@@ -65,7 +66,7 @@ body{
   margin-top: 10px;
   background-color: rgb(51, 204, 255);
   grid-row:3;
-  grid-column:4;
+  grid-column:3;
   width:350px;
   height:350px;
   /* float: right; */
