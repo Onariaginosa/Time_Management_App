@@ -10,34 +10,53 @@ text-shadow: 2px 2px 0px;
 }
 
 #button {
-  grid-row:3;
-
+ grid-row:3;
 
 }
 
+#text {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50;
+animation: type 3s steps(40);
+overflow: hidden;
+white-space: nowrap;
+font-family: consolas;
+width: 110ch;
+}
+
+@keyframes type {
+0% {
+  width:0ch;
+}
+100% {
+  width:110ch;
+}
+}
 
 #submit_button {
-   background-color: white; 
-   border: none;
-   color: rgb(51, 204, 255);
-   padding: 15px 32px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-table;
-   font-size: 16px;
-   margin: 4px 2px;
-   cursor: pointer;
-   border-radius: 15px;
- }
+  background-color: white;
+  border: none;
+  color: rgb(51, 204, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-table;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
 
- #submit_button:hover {
-   background-color: rgb(91, 255, 186);
- }
+#submit_button:hover {
+  background-color: rgb(91, 255, 186);
+}
 
 #image {
-  text-align: center;
-  align-items: center;
-  display:block;
-  margin: 0px;
-  grid-row: 2;
+ text-align: center;
+ align-items: center;
+ display:block;
+ margin: 0px;
+ grid-row: 2;
 }
