@@ -15,8 +15,6 @@ jinja_env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-
-        seed_data()
         welcome_template = jinja_env.get_template("templates/welcome.html")
         self.response.write(welcome_template.render())
 

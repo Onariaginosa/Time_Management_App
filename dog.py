@@ -9,7 +9,6 @@ jinja_env = jinja2.Environment(
    extensions=['jinja2.ext.autoescape'],
    autoescape=True)
 
-seed_data()
 
 born_opt = 0
 

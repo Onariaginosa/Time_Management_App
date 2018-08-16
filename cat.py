@@ -11,7 +11,7 @@ jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
    extensions=['jinja2.ext.autoescape'],
    autoescape=True)
-seed_data()
+
 def kat_born():
     kitty_key = Character.query(Character.species == "Cat").get()
     kitty_born = Born.query(Born.owner == kitty_key.key).get()
