@@ -16,24 +16,42 @@ text-shadow: 2px 2px 0px;
 
 #text {
 display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50;
-animation: type 3s steps(40);
+/* margin-left: auto;
+margin-right: auto; */
+text-align:center;
+/* width: 50; */
+width: 100%;
+
+/* animation: type 1s steps(20); */
 overflow: hidden;
-white-space: nowrap;
+/* white-space: nowrap; */
 font-family: consolas;
-width: 110ch;
+/* width: 110ch; */
+
+animation-name: text;
+animation-duration: 2s;
 }
 
-@keyframes type {
+@keyframes text {
+    from {width: 0%; }
+    to {width:100%;}
+    /* from {background-color: red;}
+ to {background-color: yellow;} */
+}
+
+#cont_text {
+  /* word-wrap: break-word; */
+
+}
+
+/* @keyframes type {
 0% {
   width:0ch;
 }
 100% {
   width:110ch;
 }
-}
+} */
 
 #submit_button {
   background-color: white;

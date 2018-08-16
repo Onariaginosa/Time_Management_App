@@ -8,9 +8,11 @@
   </head>
   <body>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-   <div id = text>
+   <div id = "text">
     <h1>{% block title%} {%endblock%}</h1>
-    <p>{%block message%} {%endblock%}</p>
+    <div id = "cont_text">
+      <p>{%block message%} {%endblock%}</p>
+    </div>
   </div>
     <div id = "image">
       <img {%block image %} {%endblock%} ></img>
