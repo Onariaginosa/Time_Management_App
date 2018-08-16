@@ -6,10 +6,14 @@ body{
   grid-template-columns: 1fr,1fr,1fr;
   grid-template-rows: 1fr,1fr;
   background-color: rgb(44, 199, 255);
-  margin:100px;
+  margin:100px 0;
   align-items: center;
-  overflow:hidden;
+  overflow:scroll;
+  position: fixed;
 
+}
+body > div {
+  text-align: center;
 }
 #title {
   text-align:center;
@@ -22,36 +26,28 @@ body{
   grid-row: 1;
 
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50;
   animation: type 3s steps(40);
   overflow: hidden;
   white-space: nowrap;
   font-family: consolas;
-  width: 110ch;
+  /* width: 110ch; */
 }
 
 @keyframes type {
-0% {
-  width:0ch;
-}
-100% {
-  width:110ch;
-}
+  from {width: 0%;}
+  to {width:100%}
+
 }
 
 #dogpic {
 
   align-items: center;
   border: 5px dotted white;
-  margin-left: 100px;
   background-color: rgb(51, 204, 255);
-  width: 350px;
-  height: 350px;
+  width:33%;
+  height:33%;
   align-items: center;
-  grid-row: 2;
-  grid-column:1;
+
   /* float: left; */
 }
 
@@ -63,14 +59,23 @@ body{
 
   border: 5px dotted white;
   background-color: rgb(51, 204, 255);
-  width:350px;
-  height:350px;
-  margin-top:10px;
+  width:33%;
+  height:33%;
   /* float: center; */
-  grid-row:2 ;
-  grid-column:2 ;
 
+}
 
+#dog {
+  grid-row: 2;
+  grid-column:1;
+}
+#cat{
+  grid-row:2;
+  grid-column:2;
+}
+#panda {
+  grid-column: 3;
+  grid-row: 2;
 }
 
 #catpic:hover {
@@ -79,13 +84,10 @@ body{
 
 #pandapic {
   border: 5px dotted white;
-  margin-right: 100px;
   background-color: rgb(51, 204, 255);
-  width:350px;
-  height:350px;
+  width:33%;
+  height:33%;
   /* float: right; */
-  grid-row:2 ;
-  grid-column:3 ;
 }
 
 #pandapic:hover {

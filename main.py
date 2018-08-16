@@ -5,6 +5,7 @@ import os
 import jinja2
 from cat import kat_born, kat_post_born, kitty_loop, number, kitty_pathB, kitty_pathA
 from panda import panda_born, panda_post_born, panda_pathB, panda_pathA, panda_post_pathA, panda_post_pathB, number
+from dog import doggo_born, doggo_post_born
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -92,19 +93,26 @@ class PandaPostB(webapp2.RequestHandler):
 
 class DogStory(webapp2.RequestHandler):
     def get(self):
+        dborn = doggo_born()
         dog_template = jinja_env.get_template("templates/dog.html")
-        self.response.write(dog_template.render())
+        self.response.write(dog_template.render({"dborn":dborn}))
 
-class LoadDataHandler(webapp2.RequestHandler):
+class Dog1(webapp2.RequestHandler):
     def get(self):
-        self.response.write(seed_data_template.render())
+        dog_pb = doggo_post_born()
+        dog1_template = jinja_env.get_template("templates/dog1.html")
+        self.response.write(dog1_template.render({"dog_pb": dog_pb}))
+
+
+
+
+
+
 
 app = webapp2.WSGIApplication([
    ('/', MainPage),
    ('/character',Character),
    ('/cat',CatStory),
-   ('/dog',DogStory),
-   ('/seed_data', LoadDataHandler ),
    ('/cat1',Cat1),
    ('/cat2',Cat2),
    ('/catB', CatB),
@@ -115,6 +123,8 @@ app = webapp2.WSGIApplication([
    ('/pandaB', PandaB),
    ('/pandapostA', PandaPostA),
    ('/pandapostB', PandaPostB),
+   ('/dog',DogStory),
+   ('/dog1', Dog1)
 
 
 ], debug=True)
