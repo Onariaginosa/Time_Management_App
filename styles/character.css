@@ -16,28 +16,18 @@ body{
   font-size: 40px;
   color:white;
   background-color: rgb(51, 204, 255);
-  font-family: 'Satisfy', cursive;
+  font-family: consolas;
   grid-column:1/ span 3;
   grid-row: 1;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50;
-  animation: type 3s steps(40);
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: consolas;
-  width: 110ch;
+  animation-name: text;
+  animation-duration: 2s;
 }
 
-@keyframes type {
-0% {
-  width:0ch;
-}
-100% {
-  width:110ch;
-}
+@keyframes title {
+    from {width: 0%; }
+    to {width:100%;}
+    /* from {background-color: red;}
+ to {background-color: yellow;} */
 }
 
 #dogpic {
