@@ -3,6 +3,7 @@ import webapp2
 from random import shuffle
 import os
 import jinja2
+from seed_data import seed_data
 from cat import kat_born, kat_post_born, kitty_loop, number, kitty_pathB, kitty_pathA
 from panda import panda_born, panda_post_born, panda_pathB, panda_pathA, panda_post_pathA, panda_post_pathB, number
 from dog import doggo_born, doggo_post_born
@@ -14,6 +15,7 @@ jinja_env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        seed_data()
         welcome_template = jinja_env.get_template("templates/welcome.html")
         self.response.write(welcome_template.render())
 
