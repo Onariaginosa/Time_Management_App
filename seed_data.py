@@ -36,17 +36,17 @@ def seed_data():
     born_3 = "The circus means everything to you. It has been your home for the last ten years.",
     owner = panda_key).put()
 
-    panda_post_born = PB2(pb_1 = "You become stuck in a trap! OH NO! Should you stay or escape?",
-    pb_2 = "A little kid wanders into the zoo and manages to sneak into the cage. Do you call for attention or keep quiet?",
-    pb_3 = "Oh no! Your circus has been disbanded by PETA! Do you join a new circus or start a new life?",
+    panda_post_born = PB2(pb_1 = "You become stuck in a trap! OH NO! Should you A) escape or B) stay?",
+    pb_2 = "A little kid wanders into the zoo and manages to sneak into the cage. Do you A) call for attention or B) keep quiet?",
+    pb_3 = "Oh no! Your circus has been disbanded by PETA! Do you A) start a new life or B) join a new circus?",
     owner = panda_key).put()
 
     panda_path = Path(p_1a = ["Your attempt to escape fails and you end up cutting your foot off. You lose too much blood and your vision is dimming fast. You panic because you do not want your life to end so soon! But your eyes close anyway as you slowly bleed out painfully."],
-    p_1b = ["Luckily, you were found by a group of terrorists who help free you."],
+    p_1b = ["Luckily, you were found by a group of tourists who help free you."],
     p_2a = ["Your brother suddenly comes out of nowhere and is inches from trampling the kid. But since the zookeeper heard your cries, he shows up and saves the kid. Your good behavior is rewarded and the zookeeper buys you new toys! Yay!"],
     p_2b = ["You end up playing with the kid and have a lot of fun. However, the kid’s mother spots you both playing and threatens to sue the zoo. The zoo decides to free you into the wild and you become separated from your family. You slowly grow apart from them, and after 2 years you have totally forgotten about them. Sad."],
     p_3a = ["You are unable to cope with the stress of living by yourself and end up joining a new circus."],
-    p_3b = ["You are doing great at the new circus and were even offered a new job from Larry the Lion. Should you take the job?"],
+    p_3b = ["You are doing great at the new circus and were even offered a new job from Larry the Lion. Should you A) take the job or B) don't take the job?"],
     owner = panda_key).put()
 
     panda_post_path = PPath(PP_1 = "Unfortunately your new job requires for you to jump into a pool of sharks. Your attempt to jump fails and you end up getting eaten by the sharks.",

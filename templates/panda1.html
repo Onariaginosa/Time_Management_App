@@ -1,0 +1,16 @@
+{% extends "templates/template.html" %}
+
+{% block title%}Make a Choice!{% endblock %}
+
+{%block message%} {{PPanda}} {% endblock %}
+
+{%block image %} src="/media/panda.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+<form method="get" action = "/pandaA">
+   <input id="submit_button" value = "A" type="submit"><span></span>
+</form>
+<form method="get" action = "/pandaB">
+   <input id="submit_button" value = "B" type="submit"><span></span>
+</form>
+{% endblock %}

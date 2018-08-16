@@ -1,0 +1,26 @@
+
+{% extends "templates/template.html" %}
+
+{% block title%}
+  {%if nnumber == 3%}
+    Make a Choice
+  {%else%}
+    The End!
+  {%endif%}
+{% endblock %}
+
+{%block message%} {{pPanda}} {% endblock %}
+
+{%block image %} src="/media/panda.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+  {%if nnumber == 3%}
+    <form method="get" action = "/pandaB">
+      <input id="submit_button" value = "Next" type="submit"><span></span>
+    </form>
+  {%else%}
+    <form method="get" action = "/">
+      <input id="submit_button" value = "Home" type="submit"><span></span>
+    </form>
+  {%endif%}
+{% endblock %}

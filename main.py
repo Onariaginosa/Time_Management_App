@@ -4,6 +4,7 @@ from random import shuffle
 import os
 import jinja2
 from cat import kat_born, kat_post_born, kitty_loop, number, kitty_pathB, kitty_pathA
+from panda import panda_born, panda_post_born, panda_pathB, panda_pathA, panda_post_pathA, panda_post_pathB, number
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -53,8 +54,42 @@ class CatB(webapp2.RequestHandler):
 
 class PandaStory(webapp2.RequestHandler):
     def get(self):
+        Pannda = panda_born()
         panda_template = jinja_env.get_template("templates/panda.html")
-        self.response.write(panda_template.render())
+        self.response.write(panda_template.render({"Pannda": Pannda}))
+
+class Panda1(webapp2.RequestHandler):
+    def get(self):
+        PPanda = panda_post_born()
+        panda1_template = jinja_env.get_template("templates/panda1.html")
+        self.response.write(panda1_template.render({"PPanda" :PPanda }))
+
+class PandaA(webapp2.RequestHandler):
+    def get(self):
+        nnumber = number()
+        pPanda = panda_pathA()
+        pandaA_template = jinja_env.get_template("templates/pandaA.html")
+        self.response.write(pandaA_template.render({"pPanda" :pPanda, "nnumber":nnumber }))
+
+class PandaB(webapp2.RequestHandler):
+    def get(self):
+        numbber = number()
+        Ppanda = panda_pathB()
+        pandaB_template = jinja_env.get_template("templates/pandaB.html")
+        self.response.write(pandaB_template.render({"Ppanda" :Ppanda, "numbber":numbber }))
+
+class PandaPostA(webapp2.RequestHandler):
+    def get(self):
+        posttA = panda_post_pathA()
+        pandapostA_template = jinja_env.get_template("templates/pandapostA.html")
+        self.response.write(pandapostA_template.render({"posttA" :posttA }))
+
+class PandaPostB(webapp2.RequestHandler):
+    def get(self):
+        posttB = panda_post_pathB()
+        pandapostB_template = jinja_env.get_template("templates/pandapostB.html")
+        self.response.write(pandapostB_template.render({"posttB" :posttB }))
+
 class DogStory(webapp2.RequestHandler):
     def get(self):
         dog_template = jinja_env.get_template("templates/dog.html")
@@ -68,15 +103,18 @@ app = webapp2.WSGIApplication([
    ('/', MainPage),
    ('/character',Character),
    ('/cat',CatStory),
-   ('/panda',PandaStory),
    ('/dog',DogStory),
    ('/seed_data', LoadDataHandler ),
    ('/cat1',Cat1),
    ('/cat2',Cat2),
    ('/catB', CatB),
    ('/catA', CatA),
-
-
+   ('/panda',PandaStory),
+   ('/panda1', Panda1),
+   ('/pandaA', PandaA),
+   ('/pandaB', PandaB),
+   ('/pandapostA', PandaPostA),
+   ('/pandapostB', PandaPostB),
 
 
 ], debug=True)
