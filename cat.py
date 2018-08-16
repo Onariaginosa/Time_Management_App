@@ -39,15 +39,16 @@ def kitty_loop():
     kitty_looper = Looper.query(Looper.owner == kitty_key.key).get()
     global post_born_opt
     if post_born_opt == 1:
-        return kitty_looper.loop_1
+        return [kitty_looper.loop_1, 1]
     elif post_born_opt == 2:
-        return kitty_looper.loop_2
+        return [kitty_looper.loop_2, 2]
     elif post_born_opt == 3:
-        return kitty_looper.loop_3
+        return [kitty_looper.loop_3, 3]
 
-def number():
-    global post_born_opt
-    return post_born_opt
+# def number():
+#     global post_born_opt
+#     if post_born_opt == 1 or post_born_opt == 2 or post_born_opt == 3 or == 0:
+#         return post_born_opt
 
 def kitty_pathB():
     kitty_key = Character.query(Character.species == "Cat").get()

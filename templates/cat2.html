@@ -2,15 +2,15 @@
 
 {% block title%}You chose a home!{% endblock %}
 
-{%block message%} {{Katt}} {% endblock %}
+{%block message%} {{kkatt}} {% endblock %}
 
 {%block image %} src="/media/cat.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
 
 {%block button%}
- {%if numb == 1%}
+ {% if numbr == 1 %}
    <form method="get" action = "/">
      <input id="submit_button" value = "Home" type="submit"><span></span>
- {%else%}
+ {%elif numbr == 2 or numbr == 3%}
    <form method="get" action = "/catB">
       <input id="submit_button" value = "Run" type="submit"><span></span>
    </form>
