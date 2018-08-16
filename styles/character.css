@@ -19,8 +19,26 @@ body{
   font-family: 'Satisfy', cursive;
   grid-column:1/ span 3;
   grid-row: 1;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50;
+  animation: type 3s steps(40);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: consolas;
+  width: 110ch;
 }
 
+@keyframes type {
+0% {
+  width:0ch;
+}
+100% {
+  width:110ch;
+}
+}
 
 #dogpic {
 
