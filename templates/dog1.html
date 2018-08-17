@@ -7,7 +7,20 @@
 {%block image %} src="/media/dog.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
 
 {%block button%}
-<form method="get" action = "/dog1">
-   <input id="submit_button" value = "go" type="submit"><span></span>
-</form>
+  {%if nums == 1%}
+    <form method="get" action = "/dogpreA">
+       <input id="submit_button" value = "A" type="submit"><span></span>
+    </form>
+    <form method="get" action = "/dogpreB">
+       <input id="submit_button" value = "B" type="submit"><span></span>
+    </form>
+  {%elif nums == 2 or nums == 3%}
+    <form method="get" action = "/dog2A">
+       <input id="submit_button" value = "A" type="submit"><span></span>
+    </form>
+    <form method="get" action = "/dog2B">
+       <input id="submit_button" value = "B" type="submit"><span></span>
+    </form>
+  {%endif%}
+
 {% endblock %}

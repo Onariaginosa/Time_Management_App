@@ -1,0 +1,14 @@
+{% extends "templates/template.html" %}
+
+{% block title%}Make a Choice!{% endblock %}
+
+{%block message%} {{dogpreA}} {% endblock %}
+
+{%block image %} src="/media/dog.png" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen {%endblock%}
+
+{%block button%}
+<form method="get" action = "/dog2A">
+   <input id="submit_button" value = "Go" type="submit"><span></span>
+</form>
+
+{%endblock%}

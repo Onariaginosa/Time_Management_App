@@ -6,7 +6,7 @@ import jinja2
 from seed_data import seed_data
 from cat import kat_born, kat_post_born, kitty_loop, kitty_pathB, kitty_pathA
 from panda import panda_born, panda_post_born, panda_pathB, panda_pathA, panda_post_pathA, panda_post_pathB, number
-from dog import doggo_born, doggo_post_born
+from dog import doggo_born, doggo_post_born, doggo_pre_pathA, doggo_pre_pathB, doggo_pathA, doggo_pathB
 
 jinja_env = jinja2.Environment(
    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -14,6 +14,7 @@ jinja_env = jinja2.Environment(
    autoescape=True)
 
 class MainPage(webapp2.RequestHandler):
+    # seed_data()
     def get(self):
         welcome_template = jinja_env.get_template("templates/welcome.html")
         self.response.write(welcome_template.render())
@@ -101,9 +102,35 @@ class DogStory(webapp2.RequestHandler):
 
 class Dog1(webapp2.RequestHandler):
     def get(self):
-        dog_pb = doggo_post_born()
+        doggyb = doggo_post_born()
+        dog_pb = doggyb[0]
+        nums = doggyb[1]
         dog1_template = jinja_env.get_template("templates/dog1.html")
-        self.response.write(dog1_template.render({"dog_pb": dog_pb}))
+        self.response.write(dog1_template.render({"dog_pb": dog_pb, "nums":nums}))
+
+class DogpreA(webapp2.RequestHandler):
+    def get(self):
+        dogpreA = doggo_pre_pathA()
+        dogpreA_template = jinja_env.get_template("templates/dogpreA.html")
+        self.response.write(dogpreA_template.render({"dogpreA": dogpreA}))
+
+class DogpreB(webapp2.RequestHandler):
+    def get(self):
+        dogpreB = doggo_pre_pathB()
+        dogpreB_template = jinja_env.get_template("templates/dogpreB.html")
+        self.response.write(dogpreB_template.render({"dogpreB": dogpreB}))
+
+class Dog2A(webapp2.RequestHandler):
+    def get(self):
+        dogA = doggo_pathA()
+        dog2A_template = jinja_env.get_template("templates/dog2A.html")
+        self.response.write(dog2A_template.render({"dogA": dogA}))
+
+class Dog2B(webapp2.RequestHandler):
+    def get(self):
+        dogB = doggo_pathB()
+        dog2B_template = jinja_env.get_template("templates/dog2B.html")
+        self.response.write(dog2B_template.render({"dogB": dogB}))
 
 
 
@@ -126,7 +153,11 @@ app = webapp2.WSGIApplication([
    ('/pandapostA', PandaPostA),
    ('/pandapostB', PandaPostB),
    ('/dog',DogStory),
-   ('/dog1', Dog1)
+   ('/dog1', Dog1),
+   ('/dogpreA', DogpreA),
+   ('/dogpreB', DogpreB),
+   ('/dog2A', Dog2A),
+   ('/dog2B', Dog2B),
 
 
 ], debug=True)

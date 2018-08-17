@@ -59,16 +59,16 @@ def seed_data():
     born_3 = "Your owner pats your head with affection. He gazes into your eyes and rubs you behind your ears, just the way you like. Your tail wags. You almost forget you both have no house to live in",
     owner = doggo_key).put()
 
-    doggo_post_born = PB2(pb_1 = "You see food on the dirty floor. One is a seemingly moldy dog buscuit and a dead muse lies next to it. Which do you eat?",
-    pb_2 = "You do not want to have such a boring, empty life. You want more, so you run away. DO you follow the music playing from a dirty car or run aimlessly?",
-    pb_3 = "You see that there is no food for you both tonight. There is only enough for one of you. Do you take the food, or let the hooman have it?",
+    doggo_post_born = PB2(pb_1 = "You see food on the dirty floor. One is a seemingly moldy dog buscuit and a dead mouse lies next to it. Which do you eat? Press A for the mouse and B for the buiscuit ",
+    pb_2 = "You do not want to have such a boring, empty life. You want more, so you run away. DO you A) follow the music playing from a dirty car or B) run aimlessly?",
+    pb_3 = "You see that there is no food for you both tonight. There is only enough for one of you. Do you A) take the food, or B) let the human have it?",
     owner = doggo_key).put()
 
-    doggo_pre_path = PPath(PP_1 = "You regain your strength and decide to take a chance. You go beyond your ravine.",
+    doggo_pre_path = PPath(PP_1 = "You regain your strength and decide to take a chance. You go beyond your ravine and ...",
     PP_2 = "The dog buiscuit had salmonella and you become extremely sick.",
-    owner = doggo_key)
+    owner = doggo_key).put()
 
-    doggo_path = Path(p_1a = ["You got run over by a car. You are dead.", "You find a pack of dogs. You are happy with your newfound life."],
+    doggo_path = Path(p_1a = ["You get run over by a car. You are dead.", "You find a pack of dogs. You are happy with your newfound life."],
     p_1b = ["A child finds you and takes you home. The child's family treats you and you feel better", "You die from being sick."],
     p_2a = ["The owner of the car is a travelling musician. He wants a companion for the road so he takes you. You ride off into the sunset excited for what lies ahead.", "The driver doe not stop. You chase on for hours and get tired. You die of exhaustion in an unknown place"],
     p_2b = ["Your owner sees you running away and catches you. You are taken back to your life of solitude."],

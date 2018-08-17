@@ -29,8 +29,60 @@ def doggo_post_born():
     doggo_key = Character.query(Character.species == "Dog").get()
     doggo_post_born = PB2.query(PB2.owner == doggo_key.key).get()
     if born_opt == 1:
-        return doggo_post_born.pb_1
+        return [doggo_post_born.pb_1, 1]
     elif born_opt == 2:
-        return doggo_post_born.pb_2
+        return [doggo_post_born.pb_2, 2]
     elif born_opt == 3:
-        return doggo_post_born.pb_3
+        return [doggo_post_born.pb_3, 3]
+
+def doggo_pre_pathA():
+    doggo_key = Character.query(Character.species == "Dog").get()
+    doggo_pre_path = PPath.query(PPath.owner == doggo_key.key).get()
+    return doggo_pre_path.PP_1
+
+def doggo_pre_pathB():
+    doggo_key = Character.query(Character.species == "Dog").get()
+    doggo_pre_path = PPath.query(PPath.owner == doggo_key.key).get()
+    return doggo_pre_path.PP_2
+
+def doggo_pathA():
+    global post_born_opt
+    doggo_key = Character.query(Character.species == "Dog").get()
+    doggo_pathA = Path.query(Path.owner == doggo_key.key).get()
+    why = randrange(1,3)
+    if born_opt == 1:
+        if why == 1:
+            return doggo_pathA.p_1a[0]
+        elif why == 2:
+            return doggo_pathA.p_1a[1]
+    elif born_opt == 2:
+        if why == 1:
+            return doggo_pathA.p_2a[0]
+        elif why == 2:
+            return doggo_pathA.p_2a[1]
+    elif born_opt == 3:
+        if why == 1:
+            return doggo_pathA.p_3a[0]
+        elif why == 2:
+            return doggo_pathA.p_3a[1]
+
+def doggo_pathB():
+    global post_born_opt
+    doggo_key = Character.query(Character.species == "Dog").get()
+    doggo_pathB = Path.query(Path.owner == doggo_key.key).get()
+    why = randrange(1,3)
+    if born_opt == 1:
+        if why == 1:
+            return doggo_pathB.p_1b[0]
+        elif why == 2:
+            return doggo_pathB.p_1b[1]
+    elif born_opt == 2:
+        if why == 1:
+            return doggo_pathB.p_2b[0]
+        elif why == 2:
+            return doggo_pathB.p_2b[1]
+    elif born_opt == 3:
+        if why == 1:
+            return doggo_pathB.p_3b[0]
+        elif why == 2:
+            return doggo_pathB.p_3b[1]
