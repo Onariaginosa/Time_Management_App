@@ -71,14 +71,16 @@ class Panda1(webapp2.RequestHandler):
 class PandaA(webapp2.RequestHandler):
     def get(self):
         nnumber = number()
-        pPanda = panda_pathA()
+        ppPanda = panda_pathA()
+        pPanda = "".join(ppPanda)
         pandaA_template = jinja_env.get_template("templates/pandaA.html")
         self.response.write(pandaA_template.render({"pPanda" :pPanda, "nnumber":nnumber }))
 
 class PandaB(webapp2.RequestHandler):
     def get(self):
         numbber = number()
-        Ppanda = panda_pathB()
+        PPpanda = panda_pathB()
+        Ppanda = "".join(PPpanda)
         pandaB_template = jinja_env.get_template("templates/pandaB.html")
         self.response.write(pandaB_template.render({"Ppanda" :Ppanda, "numbber":numbber }))
 
